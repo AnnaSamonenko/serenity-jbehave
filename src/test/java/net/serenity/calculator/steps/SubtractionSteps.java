@@ -3,30 +3,26 @@ package net.serenity.calculator.steps;
 import net.serenity.calculator.steps.serenity.UserSteps;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
+import org.jbehave.core.annotations.Named;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 
-/**
- * Created by Анна on 25/12/2017.
- */
 public class SubtractionSteps {
     @Steps
     UserSteps user;
-    Double firstNumber = 12.2;
-    Double secondNumber = 34.9;
 
-    @Given("I have searched for calculator")
-    public void givenIHaveSearchedForCalculator() {
-        user.search_for_calculator();
+    @Given("I have searched for <search_query>")
+    public void givenIHaveSearchedForCalculator(@Named("search_query") String search_query) {
+        user.search_for_calculator(search_query);
     }
 
-    @When("I do subtraction of numbers")
-    public void whenIDoSubtractionOfNumbers() {
+    @When("I deduct the <first_number> by the <second_number>")
+    public void whenIDoSubtractionOfNumbers(@Named("first_number") Double firstNumber, @Named("second_number") Double secondNumber) {
         user.produce_subtraction(firstNumber, secondNumber);
     }
 
     @Then("I get the difference")
-    public void thenIGetTheDifference() {
+    public void thenIGetTheDifference(@Named("first_number") Double firstNumber, @Named("second_number") Double secondNumber) {
         user.check_result_subtraction(firstNumber, secondNumber);
     }
 

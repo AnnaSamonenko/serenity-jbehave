@@ -14,16 +14,16 @@ public class UserSteps {
     GoogleCalculatorPage calculatorPage;
 
     @Step
-    public void search_for_calculator() {
+    public void search_for_calculator(String searchQuery) {
         searchPage.open();
 
-        searchPage.searchForString("calculator");
+        searchPage.searchForString(searchQuery);
         try {
             searchPage.submitForm();
         } catch (Exception ex) {
             // Some logger need to be here
         }
-        searchPage.titleShouldMatch("calculator");
+        searchPage.titleShouldMatch(searchQuery);
     }
 
     @Step
