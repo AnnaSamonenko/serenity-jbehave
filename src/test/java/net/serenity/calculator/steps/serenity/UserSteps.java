@@ -48,22 +48,27 @@ public class UserSteps {
     }
 
     @Step
-    public void check_result_addition(double num1, double num2) {
-        calculatorPage.checkResult(num1 + num2);
+    public void check_result_addition(Double sum) {
+        calculatorPage.checkResult(sum);
     }
 
     @Step
-    public void check_result_subtraction(double num1, double num2) {
-        calculatorPage.checkResult(num1 - num2);
+    public void check_result_subtraction(Double difference) {
+        calculatorPage.checkResult(difference);
     }
 
     @Step
-    public void check_result_multiplication(double num1, double num2) {
-        calculatorPage.checkResult(num1 * num2);
+    public void check_result_multiplication(Double composition) {
+        calculatorPage.checkResult(composition);
     }
 
     @Step
-    public void check_result_division(double num1, double num2) {
-        calculatorPage.checkResult(num1 / num2);
+    public void check_result_division(Double quotient) {
+        calculatorPage.checkResult(quotient);
+    }
+
+    @Step
+    public void check_result_division_by_zero(String infinity) {
+        calculatorPage.checkResult(infinity);
     }
 }

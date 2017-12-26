@@ -22,8 +22,8 @@ public class DivisionSteps {
         user.produce_division(firstNumber, secondNumber);
     }
 
-    @Then("I get the quotient")
-    public void thenIGetTheQuotient(@Named("first_number") Double firstNumber, @Named("second_number") Double secondNumber) {
-        user.check_result_division(firstNumber, secondNumber);
+    @Then("I get the <quotient>")
+    public void thenIGetTheQuotient(@Named("quotient") Double quotient) {
+        user.check_result_division(quotient);
     }
 }

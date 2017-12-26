@@ -11,7 +11,6 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
-@DefaultUrl("http://www.google.com")
 public class GoogleSearchPage extends PageObject {
     @FindBy(xpath = "//*[@id=\"lst-ib\"]")
     WebElementFacade search;

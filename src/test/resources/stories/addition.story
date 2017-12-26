@@ -8,9 +8,9 @@ So that I can know sum
 Scenario: Show sum of numbers
 Given I have searched for <search_query>
 When I add the <first_numer> by the <second_number>
-Then I get the sum
+Then I get the <sum>
 
 Examples:
-|search_query|first_number|second_number|
-|calculator|3848484.0|5.0|
-|1-1|5875858|11.0|
+|search_query|first_number|second_number|sum|
+|calculator|3848484.0|5.5|3848489.5|
+|1-1|5875858|1.0|5875859.0|

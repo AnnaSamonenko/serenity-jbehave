@@ -22,9 +22,9 @@ public class AdditionSteps {
         user.produce_addition(firstNumber, secondNumber);
     }
 
-    @Then("I get the sum")
-    public void thenIGetTheSum(@Named("first_number") Double firstNumber, @Named("second_number") Double secondNumber) {
-        user.check_result_addition(firstNumber, secondNumber);
+    @Then("I get the <sum>")
+    public void thenIGetTheSum(@Named("sum") Double sum) {
+        user.check_result_addition(sum);
     }
 
 }

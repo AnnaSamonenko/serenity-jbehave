@@ -22,8 +22,8 @@ public class MultiplicationSteps {
         user.produce_multiplication(firstNumber, secondNumber);
     }
 
-    @Then("I get the composition")
-    public void thenIGetTheComposition(@Named("first_number") Double firstNumber, @Named("second_number") Double secondNumber) {
-        user.check_result_multiplication(firstNumber, secondNumber);
+    @Then("I get the $composition")
+    public void thenIGetTheComposition(Double composition) {
+        user.check_result_multiplication(composition);
     }
 }

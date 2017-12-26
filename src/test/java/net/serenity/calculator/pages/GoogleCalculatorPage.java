@@ -71,6 +71,12 @@ public class GoogleCalculatorPage extends PageObject {
     }
 
     @Step
+    public void checkResult(String expectedRes) {
+        withTimeoutOf(30, TimeUnit.SECONDS).waitFor(res);
+        assertEquals(res.getText(), expectedRes);
+    }
+
+    @Step
     public void addition(Double num1, Double num2) {
         Map<Character, WebElementFacade> hashMap = createMapOfButtons();
         inputNumber(hashMap, num1);

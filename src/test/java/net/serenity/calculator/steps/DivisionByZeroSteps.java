@@ -22,8 +22,8 @@ public class DivisionByZeroSteps {
         user.produce_division(firstNumber, 0);
     }
 
-    @Then("I get infinity")
-    public void thenIGetInfinity(@Named("first_number") Double firstNumber) {
-        user.check_result_division(firstNumber, 0);
+    @Then("I get <infinity>")
+    public void thenIGetInfinity(@Named("infinity") String infinity) {
+        user.check_result_division_by_zero(infinity);
     }
 }

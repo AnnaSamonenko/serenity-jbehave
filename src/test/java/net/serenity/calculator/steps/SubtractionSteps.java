@@ -21,9 +21,9 @@ public class SubtractionSteps {
         user.produce_subtraction(firstNumber, secondNumber);
     }
 
-    @Then("I get the difference")
-    public void thenIGetTheDifference(@Named("first_number") Double firstNumber, @Named("second_number") Double secondNumber) {
-        user.check_result_subtraction(firstNumber, secondNumber);
+    @Then("I get the <difference>")
+    public void thenIGetTheDifference(@Named("difference") Double difference) {
+        user.check_result_subtraction(difference);
     }
 
 }
